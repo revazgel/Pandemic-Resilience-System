@@ -1,0 +1,354 @@
+/* admin_styles.css - Combined and optimized */
+:root {
+  --admin-primary: #6200ea;
+  --admin-secondary: #b388ff;
+  --admin-accent: #03dac6;
+  --admin-danger: #cf6679;
+  --admin-background: #121212;
+  --admin-surface: #1e1e1e;
+  --admin-on-surface: #ffffff;
+}
+
+/* Modern card styling */
+.modern-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+  border: none;
+}
+
+.modern-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.modern-card .card-header {
+  border-bottom: none;
+  padding: 1.5rem;
+}
+
+.modern-card .card-body {
+  padding: 1.5rem;
+}
+
+/* Admin Navbar styling with enhanced z-index fixes */
+.admin-navbar {
+  background: linear-gradient(135deg, var(--admin-primary), var(--admin-secondary));
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  z-index: 1050;
+  position: relative;
+}
+
+.admin-navbar .navbar-nav {
+  z-index: 1051;
+}
+
+.admin-navbar .dropdown-menu {
+  z-index: 1055;
+}
+
+.admin-navbar .nav-link {
+  color: white;
+  padding: 0.5rem 1rem;
+  margin: 0 0.25rem;
+  border-radius: 8px;
+  transition: background-color 0.2s;
+}
+
+.admin-navbar .nav-link:hover {
+  background-color: rgba(255,255,255,0.1);
+}
+
+.admin-navbar .nav-link.active {
+  background-color: rgba(255,255,255,0.2);
+  font-weight: 500;
+}
+
+/* Ensure user dropdown is properly spaced */
+.navbar-nav:last-child {
+  margin-left: auto;
+}
+
+/* Navbar button styling */
+.navbar-toggler {
+  border: none;
+  padding: 0.25rem 0.75rem;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* Enhanced Role switcher styling with better overlap prevention */
+.role-switcher {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  margin-top: 20px;
+  position: relative;
+  z-index: 1;
+  isolation: isolate;
+}
+
+.role-badge {
+  background: rgba(255, 255, 255, 0.1);
+  color: white !important;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 50px;
+  display: inline-block;
+  font-weight: 500;
+  white-space: nowrap;
+  user-select: none;
+  margin: 0.2rem;
+  font-size: 14px;
+}
+
+.role-badge:hover, 
+.role-badge.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+}
+
+.role-badge:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3);
+}
+
+.role-badge i {
+  margin-right: 8px;
+}
+
+/* Legacy role colors for backward compatibility */
+.role-badge.admin {
+  background-color: var(--admin-primary);
+  color: white;
+}
+
+.role-badge.official {
+  background-color: #8e2de2;
+  color: white;
+}
+
+.role-badge.merchant {
+  background-color: #4b6cb7;
+  color: white;
+}
+
+.role-badge.citizen {
+  background-color: #28a745;
+  color: white;
+}
+
+/* Role switcher layout with better spacing */
+.role-switcher .d-flex {
+  gap: 15px !important;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Ensure proper spacing between elements and no overlap */
+.container {
+  position: relative;
+  z-index: 1;
+}
+
+.container > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix fade-in animation */
+.fade-in {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.show {
+  opacity: 1;
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+  .role-switcher .d-flex {
+    gap: 10px !important;
+    justify-content: center;
+  }
+  
+  .role-badge {
+    margin: 2px;
+    padding: 8px 16px;
+    font-size: 13px;
+    max-width: 100px;
+    text-align: center;
+  }
+  
+  .role-badge i {
+    margin-right: 6px;
+  }
+}
+
+/* Dashboard stats styling */
+.stat-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  transition: transform 0.3s;
+}
+
+.stat-card:hover {
+  transform: translateY(-5px);
+}
+
+.stat-card .stat-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stat-card .stat-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-card .stat-label {
+  font-size: 1rem;
+  color: #718096;
+  font-weight: 500;
+}
+
+.stat-card.admin {
+  background: linear-gradient(135deg, var(--admin-primary), var(--admin-secondary));
+  color: white;
+}
+
+.stat-card.admin .stat-label {
+  color: rgba(255,255,255,0.8);
+}
+
+/* Alert styling */
+.modern-alert {
+  border-radius: 8px;
+  padding: 1rem 1.5rem;
+  margin-bottom: 1.5rem;
+  border: none;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.modern-alert i {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+}
+
+/* Button styling */
+.btn-admin {
+  background-color: var(--admin-primary);
+  color: white;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-admin:hover {
+  background-color: #7c4dff;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(98, 0, 234, 0.4);
+}
+
+/* Button group spacing */
+.btn-group .btn {
+  margin-right: 0;
+}
+
+/* Table styling */
+.modern-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.modern-table thead th {
+  background-color: var(--admin-primary);
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
+  border-bottom: 2px solid #dee2e6;
+}
+
+.modern-table tbody tr {
+  transition: background-color 0.2s;
+}
+
+.modern-table tbody tr:hover {
+  background-color: rgba(179, 136, 255, 0.1);
+}
+
+.modern-table td {
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* Status badge styling */
+.status-badge {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  border-radius: 50px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-badge.pending {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.status-badge.approved {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.rejected {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Fix any z-index issues with content */
+.card {
+  position: relative;
+  z-index: 1;
+}
+
+/* Fix dropdown positioning */
+.dropdown-menu {
+  z-index: 1055;
+}
+
+/* Ensure proper spacing between elements */
+.py-4 {
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}

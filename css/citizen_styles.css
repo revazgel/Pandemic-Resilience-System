@@ -1,0 +1,1103 @@
+/* 
+ * Citizen Dashboard Styles - Complete Version
+ */
+
+/* Base styles */
+body {
+    background-color: #f0fff5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/* Header styles */
+.page-header {
+    background: linear-gradient(135deg, #28a745 0%, #155724 100%);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header {
+    padding: 15px 0;
+    border-bottom: 2px solid #e9ecef;
+    margin-bottom: 20px;
+}
+
+.header h2 {
+    color: #28a745;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.header h2 i {
+    margin-right: 0.75rem;
+}
+
+/* Card styles */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-title {
+    color: #155724;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+.card-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.card-header.bg-primary {
+    background: linear-gradient(135deg, #28a745 0%, #155724 100%) !important;
+    color: white;
+}
+
+/* Form elements */
+.form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.form-control, .form-select {
+    padding: 0.6rem 0.75rem;
+    border-radius: 7px;
+    border: 1px solid #ced4da;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+}
+
+.input-group-text {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+}
+
+.form-text {
+    color: #6c757d;
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Buttons - Enhanced and Fixed */
+.btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 7px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    white-space: nowrap !important;
+    text-decoration: none !important;
+    border: none !important;
+    cursor: pointer !important;
+}
+
+.btn i {
+    margin-right: 0 !important;
+    font-size: 0.875rem !important;
+    width: auto !important;
+    text-align: left;
+}
+
+.btn-primary {
+    background: linear-gradient(to right, #28a745, #155724) !important;
+    border: none;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.2);
+    color: white !important;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+    background: linear-gradient(to right, #218838, #0e401c) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+    color: white !important;
+}
+
+.btn-success {
+    background: linear-gradient(to right, #28a745, #155724);
+    border: none;
+    box-shadow: 0 4px 6px rgba(40, 167, 69, 0.2);
+    color: white;
+}
+
+.btn-success:hover, .btn-success:focus {
+    background: linear-gradient(to right, #218838, #0e401c);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+    color: white;
+}
+
+.btn-outline-secondary, .btn-outline-primary {
+    transition: all 0.3s ease;
+}
+
+.btn-outline-secondary:hover, .btn-outline-primary:hover {
+    transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+    border-color: #28a745 !important;
+    color: #28a745 !important;
+}
+
+.btn-outline-primary:hover {
+    background-color: #28a745 !important;
+    border-color: #28a745 !important;
+    color: white !important;
+}
+
+.btn-sm {
+    padding: 0.375rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.btn-sm i {
+    font-size: 0.8rem;
+}
+
+/* Button layout fixes */
+.d-flex.justify-content-between.mt-3,
+.footer-nav {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 1rem !important;
+    margin-top: 1.5rem !important;
+    flex-wrap: wrap !important;
+}
+
+.btn-group {
+    display: flex !important;
+    gap: 0.5rem !important;
+    flex-wrap: wrap !important;
+}
+
+.btn-group .btn {
+    flex: 0 0 auto;
+}
+
+.card-footer {
+    background-color: transparent !important;
+    border-top: 1px solid #dee2e6 !important;
+    padding: 0.75rem 1.25rem !important;
+}
+
+.card-footer .btn {
+    margin-right: 0.5rem !important;
+}
+
+.card-footer .btn:last-child {
+    margin-right: 0 !important;
+}
+
+.d-grid {
+    display: grid;
+    gap: 0.5rem;
+}
+
+.d-grid.gap-2 {
+    gap: 0.5rem;
+}
+
+.d-flex.gap-2 {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.flex-grow-1 {
+    flex-grow: 1;
+    min-width: 0;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 10px;
+    padding: 1rem 1.25rem;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.alert i {
+    margin-right: 0.75rem;
+    font-size: 1.25rem;
+}
+
+.alert-success {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+/* Customer details panel */
+.user-details {
+    background-color: rgba(40, 167, 69, 0.05);
+    padding: 1.25rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    border-left: 4px solid #28a745;
+    transition: all 0.3s ease;
+}
+
+.user-details:hover {
+    background-color: rgba(40, 167, 69, 0.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.user-details h5 {
+    color: #155724;
+    margin-bottom: 1rem;
+}
+
+.user-details p {
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+}
+
+.user-details p i {
+    color: #28a745;
+    width: 20px;
+    margin-right: 0.5rem;
+}
+
+/* Badges */
+.badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: 50rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.badge i {
+    margin-right: 0.35rem;
+}
+
+.bg-success {
+    background-color: #28a745 !important;
+}
+
+.bg-danger {
+    background-color: #dc3545 !important;
+}
+
+.bg-warning {
+    background-color: #ffc107 !important;
+    color: #212529 !important;
+}
+
+.eligible-badge {
+    background-color: #28a745;
+    color: white;
+}
+
+.not-eligible-badge {
+    background-color: #dc3545;
+    color: white;
+}
+
+/* Tables */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.table th {
+    background-color: #155724;
+    color: white;
+    font-weight: 600;
+    padding: 12px 15px;
+    vertical-align: top;
+    text-align: left;
+    cursor: pointer;
+}
+
+.table th i {
+    margin-left: 5px;
+    font-size: 0.8rem;
+}
+
+.table td {
+    padding: 12px 15px;
+    vertical-align: middle;
+    border-top: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(40, 167, 69, 0.05);
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+/* Specific styles for citizen dashboard */
+.merchant-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.merchant-details {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+.stats-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    gap: 15px;
+}
+
+.stat-box {
+    flex: 1;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.stat-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #28a745;
+    margin-bottom: 0;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    color: #6c757d;
+    margin-top: 0.5rem;
+}
+
+.grid-container {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 15px;
+}
+
+.grid-left {
+    flex: 1;
+}
+
+.grid-right {
+    flex: 1;
+}
+
+.panel {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.panel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.panel-header {
+    background: linear-gradient(135deg, #28a745 0%, #155724 100%);
+    color: white;
+    padding: 12px 15px;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.panel-body {
+    padding: 15px;
+}
+
+.action-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.action-link {
+    padding: 12px;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #212529;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.action-link:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #28a745;
+    text-decoration: none;
+}
+
+.action-link i {
+    color: #28a745;
+}
+
+.alert-item {
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease;
+}
+
+.alert-item:hover {
+    transform: translateY(-2px);
+}
+
+.alert-critical {
+    background-color: #f8d7da;
+    color: #721c24;
+    border-left: 3px solid #dc3545;
+}
+
+.day-badge {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+.day-badge.active {
+    background-color: #28a745;
+    color: white;
+}
+
+.day-badge.today {
+    background-color: #17a2b8;
+    color: white;
+}
+
+.item-card {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+    border-left: 4px solid;
+}
+
+.item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.Medical {
+    border-left-color: #dc3545;
+}
+
+.Grocery {
+    border-left-color: #28a745;
+}
+
+.Hygiene {
+    border-left-color: #17a2b8;
+}
+
+.Protective {
+    border-left-color: #6f42c1;
+}
+
+.vaccine-card {
+    border-radius: 10px;
+    margin-bottom: 15px;
+    transition: transform 0.2s;
+    border-left: 4px solid #28a745;
+}
+
+.vaccine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.merchant-card {
+    transition: transform 0.2s;
+}
+
+.merchant-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Animation effects */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in.show {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 767.98px) {
+    .stats-row, 
+    .grid-container, 
+    .status-guide,
+    .search-container {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .page-header,
+    .merchant-info {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .table-pagination {
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+    }
+    
+    .d-flex.justify-content-between.mt-3,
+    .footer-nav {
+        flex-direction: column !important;
+        width: 100% !important;
+        gap: 0.75rem !important;
+    }
+    
+    .footer-nav .btn {
+        width: 100% !important;
+        text-align: center !important;
+        justify-content: center !important;
+    }
+    
+    .action-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Purchase Schedule Calendar Styles */
+.calendar-container {
+    margin-bottom: 30px;
+}
+
+.calendar-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.calendar-day {
+    flex: 1;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    margin: 0 5px;
+    padding: 10px;
+    min-height: 150px;
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.calendar-day.today {
+    background-color: #d1e7dd;
+    border-color: #28a745;
+    box-shadow: 0 0 10px rgba(40, 167, 69, 0.3);
+}
+
+.day-header {
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.today-badge {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background-color: #28a745;
+    color: white;
+    font-size: 0.7rem;
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.item-pill {
+    display: block;
+    background-color: #e9ecef;
+    border-radius: 15px;
+    padding: 3px 8px;
+    margin: 5px 0;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.2s;
+}
+
+.item-pill:hover {
+    background-color: #d6d8db;
+    transform: translateY(-2px);
+}
+
+.item-pill.Medical {
+    background-color: #f8d7da;
+    border-left: 3px solid #dc3545;
+}
+
+.item-pill.Grocery {
+    background-color: #d1e7dd;
+    border-left: 3px solid #28a745;
+}
+
+.legend {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+}
+
+.legend-color {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border-radius: 3px;
+}
+
+/* Purchase Schedule Chart Styles */
+.purchase-schedule-chart {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    min-width: 900px;
+    padding: 15px;
+}
+
+.chart-header {
+    display: flex;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 10px;
+}
+
+.chart-cell {
+    flex: 1;
+    text-align: center;
+    font-weight: 600;
+}
+
+.chart-row {
+    display: flex;
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.chart-item-name {
+    width: 200px;
+    padding-right: 15px;
+    font-weight: 500;
+}
+
+.chart-day {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.day-indicator {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #e9ecef;
+}
+
+.day-indicator.eligible {
+    background-color: #28a745;
+}
+
+.day-indicator.today {
+    border: 2px solid #0dcaf0;
+}
+
+/* Disease section styling */
+.disease-header {
+    background: linear-gradient(135deg, #6c757d 0%, #495057 100%);
+    color: white;
+    padding: 8px 15px;
+    margin: 15px 0 10px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Category headers */
+.category-header {
+    background: linear-gradient(135deg, #17a2b8 0%, #138496 100%);
+    color: white;
+    padding: 8px 15px;
+    margin: 15px 0 10px 0;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* Dose styling */
+.dose-card {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border-left: 3px solid #17a2b8;
+}
+
+.verified-badge {
+    color: #28a745;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.unverified-badge {
+    color: #dc3545;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Dose info styling */
+.dose-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.dose-icon {
+    background-color: #28a745;
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+}
+
+/* Search container */
+.search-container {
+    margin-bottom: 20px;
+}
+
+.filter-container {
+    margin-bottom: 20px;
+}
+
+/* Item styling */
+.item-container {
+    margin-bottom: 15px;
+}
+
+.out-of-stock {
+    opacity: 0.7;
+}
+
+.out-of-stock .card-body {
+    background-color: #f8f9fa;
+}
+
+/* Item image placeholder */
+.item-image {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 5px;
+}
+
+.item-image i {
+    font-size: 2rem;
+    color: #6c757d;
+}
+
+/* Customer details styling */
+.customer-details h5 {
+    color: #28a745;
+    margin-bottom: 15px;
+}
+
+.customer-details p {
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.customer-details p i {
+    color: #28a745;
+    width: 20px;
+    margin-right: 10px;
+}
+
+/* Progress styling */
+.progress {
+    height: 10px;
+    border-radius: 5px;
+    background-color: #e9ecef;
+}
+
+.progress-bar {
+    border-radius: 5px;
+}
+
+/* Accordion styling */
+.accordion-item {
+    border: 1px solid #dee2e6;
+    border-radius: 5px !important;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.accordion-button {
+    background-color: #f8f9fa;
+    border: none;
+    font-weight: 500;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #28a745;
+    background-color: #d4edda;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Purchase card styling */
+.purchase-card {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.purchase-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.purchase-date {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Responsive calendar */
+@media (max-width: 767.98px) {
+    .calendar-row {
+        flex-wrap: wrap;
+    }
+    
+    .calendar-day {
+        flex-basis: calc(50% - 10px);
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .calendar-day {
+        flex-basis: 100%;
+    }
+}
+
+/* No results message */
+.no-results-message {
+    text-align: center;
+    padding: 30px;
+    color: #6c757d;
+}
+
+/* Tab styling */
+.nav-pills .nav-link {
+    border-radius: 25px;
+    padding: 10px 20px;
+    margin-right: 10px;
+    transition: all 0.3s ease;
+}
+
+.nav-pills .nav-link.active {
+    background-color: #28a745;
+}
+
+/* Badge styling for vaccines */
+.badge-custom {
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.badge-approval {
+    background-color: #17a2b8;
+    color: white;
+}
+
+/* Ensure proper spacing for all card elements */
+.card .card-header + .card-body {
+    padding-top: 1rem;
+}
+
+/* Fix any overflow issues */
+.table-responsive {
+    overflow-x: auto;
+}
+
+/* Ensure dropdowns are above other elements */
+.dropdown-menu {
+    z-index: 1050;
+}
+
+/* Better spacing for lists */
+.list-group-item {
+    border: none;
+    padding: 10px 0;
+}
+
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.list-group-item:last-child {
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Styling for role badges in navbar */
+.role-badge {
+    background: rgba(255, 255, 255, 0.1);
+    color: white !important;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 50px;
+    display: inline-block;
+    font-weight: 500;
+    white-space: nowrap;
+    user-select: none;
+    margin: 0.25rem;
+    font-size: 14px;
+    max-width: 200px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.role-badge:hover, 
+.role-badge.active {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    color: white !important;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    text-decoration: none;
+}
+
+/* Ensure text doesn't overflow on mobile */
+@media (max-width: 576px) {
+    .role-badge {
+        max-width: 100px;
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

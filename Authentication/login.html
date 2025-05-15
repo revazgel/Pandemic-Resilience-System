@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - Pandemic Resilience System</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      background-color: #f0fff5;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+    }
+    
+    .login-container {
+      max-width: 450px;
+      margin: auto;
+      margin-top: 10vh;
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    
+    .login-card {
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    
+    .login-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    }
+    
+    .login-header {
+      background: linear-gradient(135deg, #28a745 0%, #155724 100%);
+      color: white;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    
+    .login-title {
+      font-weight: 600;
+      margin-bottom: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .login-title i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+    }
+    
+    .login-body {
+      padding: 2rem;
+    }
+    
+    .form-control {
+      padding: 0.6rem 0.75rem;
+      border-radius: 7px;
+      border: 1px solid #ced4da;
+      transition: all 0.2s ease;
+    }
+    
+    .form-control:focus {
+      border-color: #28a745;
+      box-shadow: 0 0 0 0.25rem rgba(40, 167, 69, 0.25);
+    }
+    
+    .form-label {
+      font-weight: 500;
+      color: #333;
+      margin-bottom: 0.5rem;
+    }
+    
+    .btn-primary {
+      background: linear-gradient(to right, #28a745, #155724);
+      border: none;
+      box-shadow: 0 4px 6px rgba(40, 167, 69, 0.2);
+      padding: 0.6rem 1rem;
+      border-radius: 7px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(to right, #218838, #0e401c);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 12px rgba(40, 167, 69, 0.3);
+    }
+    
+    .register-link {
+      text-align: center;
+      margin-top: 1.5rem;
+    }
+    
+    .register-link a {
+      color: #28a745;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    
+    .register-link a:hover {
+      color: #155724;
+      text-decoration: underline;
+    }
+    
+    .system-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #28a745;
+    }
+    
+    .prs-footer {
+      text-align: center;
+      margin-top: 2rem;
+      color: #6c757d;
+      font-size: 0.85rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container login-container">
+    <div class="card login-card">
+      <div class="login-header">
+        <h3 class="login-title">
+          <i class="fas fa-shield-virus"></i> Pandemic Resilience System
+        </h3>
+      </div>
+      
+      <div class="login-body">
+        <div class="text-center mb-4">
+          <i class="fas fa-user-lock system-icon"></i>
+          <h5>Login to your Account</h5>
+          <p class="text-muted">Enter your credentials to access the system</p>
+        </div>
+        
+        <div id="alert-placeholder"></div>
+        
+        <form action="login.php" method="POST" id="loginForm">
+          <div class="mb-3">
+            <label for="username" class="form-label">
+              <i class="fas fa-user"></i> Username
+            </label>
+            <input type="text" class="form-control" id="username" name="username" placeholder="Enter your username" required>
+          </div>
+          
+          <div class="mb-3">
+            <label for="password" class="form-label">
+              <i class="fas fa-lock"></i> Password
+            </label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password" required>
+          </div>
+          
+          <button type="submit" class="btn btn-primary w-100">
+            <i class="fas fa-sign-in-alt"></i> Login
+          </button>
+        </form>
+        
+        <div class="register-link">
+          <p>Don't have an account? <a href="register.html">Register here</a></p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="prs-footer">
+      <p>Pandemic Resilience System © 2025</p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const error = params.get('error');
+    const success = params.get('success');
+
+    if (error || success) {
+      let message = '';
+      let alertType = 'danger';
+      let icon = 'fa-exclamation-circle';
+
+      if (error === 'invalid') {
+        message = 'Incorrect username or password.';
+      }
+
+      if (success === '1') {
+        message = 'Login successful! Redirecting...';
+        alertType = 'success';
+        icon = 'fa-check-circle';
+
+        // Redirect after 2 seconds
+        setTimeout(() => {
+          window.location.href = 'index.php';
+        }, 2000);
+      }
+
+      document.getElementById('alert-placeholder').innerHTML = `
+        <div class="alert alert-${alertType} alert-dismissible fade show mb-4" role="alert">
+          <i class="fas ${icon}"></i> ${message}
+          <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+      `;
+
+      // Clear form fields
+      document.getElementById('username').value = '';
+      document.getElementById('password').value = '';
+    }
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
